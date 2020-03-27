@@ -6,6 +6,7 @@ module.exports = {
         const ongs = await connection('ongs').select('*');
         return response.json(ongs);
     },
+
     async create (request, response){
 
         const { name, email, whatsapp, city, uf } = request.body;
@@ -20,6 +21,5 @@ module.exports = {
             uf
         });
         return response.json({ id });
-
     }
 }
